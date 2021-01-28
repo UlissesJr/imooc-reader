@@ -110,6 +110,13 @@
             <version>1.2.3</version>
         </dependency>
 
+        <!-- 增加MyBatis-Plus依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+
 
     </dependencies>
 

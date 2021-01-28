@@ -66,7 +66,9 @@
 
     <!--Mybatis与Spring的整合配置 3.sqlSessionFactory-->
     <!--SqlSessionFactoryBean用于根据配置信息创建SqlSessionFactory,不再需要我们自己编码创建-->
-    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <!-- <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+    <!--要整合MyBatis-Plus需要-->
+    <bean id="sessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlsessionFactoryBean">
         <property name="dataSource" ref="datasource"/>
         <!-- 代表存储sql语句的xml文件的存储位置 -->
         <property name="mapperLocations" value="classpath:mappers/*.xml"/>
