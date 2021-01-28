@@ -80,5 +80,12 @@
         <property name="basePackage" value="com.imooc.reader.mapper"/>
     </bean>
 
+    <!--声明式事务控制-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="datasource"/>
+    </bean>
+    <!--启用注解的事务管理器-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
 
 </beans>
